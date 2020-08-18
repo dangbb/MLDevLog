@@ -1,0 +1,21 @@
+Assume we have 3 matrices. W, X, D with size i*k, k*j and i*j, respectively.
+
+First, we keep an eye on D[i,j]:
+        
+        D[i][j] = sum(W[i][k], X[k][j]) with all possible k
+        
+Derivative D[i][j] w.r.t W[i][k]:
+        
+        d(D[i][j]) / d(W[i][k]) = X[k][j]
+        
+Second, we examinate, with L as our loss:
+      
+        d(L[i][j]) / d(W[i][k]) = d(L[i][j]) / d(D[i][j]) * d(D[i][j]) / d(W[i][k])
+        
+                                = d(L[i][j]) / d(D[i][j]) * X[k][j] or X^T [j][k]
+                                
+So, we have matrix multiplication for d(L) / d(W):
+        
+        d(L) / d(W) = d(L) / d(D) * X^T
+        
+That the reason why, :)
