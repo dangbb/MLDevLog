@@ -1,0 +1,4 @@
+1, 
+    [WinError 127] The specificed procedure could not be found
+    
+    Sol: Copy the file libssl-1_1-x64.dll from Conda/DLLs and paste to Conda/Library/bin
