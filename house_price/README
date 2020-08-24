@@ -1,0 +1,4 @@
+Neural network model for house price prediction
+Using ReLU as activation layer 
+
+Change network architecture in model.csv
