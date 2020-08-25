@@ -1,0 +1,8 @@
+It's hard to sleep ! 
+
+Learn how to implement a pipeline for data analysis 
+
+1, Prepocess:
+    - Fill NaN values with actually value 
+    - Change type of some number base to categorical, like year solve 
+    - Using PCA or Truncate SVD or t-SNE for dimension reducion. remember, only using t-SNE if the number of dimension is the way to big.
