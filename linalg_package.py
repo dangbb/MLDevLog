@@ -47,8 +47,8 @@ def L2_derivative(yhat, y):
     return (y - yhat)
 
 def cross_entropy(yhat, y):
-    return -(np.dot(yhat, np.log(y)) + np.dot(np.log(1-y), (1-yhat)))
+    return -(np.dot(yhat, np.log(y).T) + np.dot(np.log(1-y), (1-yhat).T)) / y.size
 
 def cross_entropy_derivative(yhat, y):
-    return (y - yhat).T
+    return (- yhat / y + (1 - yhat) / (1 - y)) / y.size
 
